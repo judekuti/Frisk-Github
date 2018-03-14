@@ -1,7 +1,8 @@
 $(document).ready(function(){
   $('#searchUser').on('keyup', function(e){
     let username = e.target.value;
-// Make request to Github
+
+    // Make request to Github
     $.ajax({
       url:'https://api.github.com/users/'+username,
       data:{
@@ -12,8 +13,8 @@ $(document).ready(function(){
       $.ajax({
         url:'https://api.github.com/users/'+username+'/repos',
         data:{
-          client_id:'d9308aacf8b204d361fd',
-          client_secret:'62551cc02cee983fff0bac41baf170eb5a312c1c',
+          client_id:'ea8b9ad48306d1a34ab2',
+          client_secret:'4b1fbd67c14299b515667933165c8016b1468e47',
           sort: 'created: asc',
           per_page: 5
         }
@@ -26,9 +27,9 @@ $(document).ready(function(){
                   <strong>${repo.name}</strong>: ${repo.description}
                 </div>
                 <div class="col-md-3">
-                  <span class="label label-default">Forks: ${repo.forks_count}</span>
-                  <span class="label label-primary">Watchers: ${repo.watchers_count}</span>
-                  <span class="label label-success">Stars: ${repo.stargazers_count}</span>
+                  <span class="label label-primary">Forks: ${repo.forks_count}</span>
+                  <span class="label label-success">Watchers: ${repo.watchers_count}</span>
+                  <span class="label label-danger">Stars: ${repo.stargazers_count}</span>
                 </div>
                 <div class="col-md-2">
                   <a href="${repo.html_url}" target="_blank" class="btn btn-default">Repo Page</a>
@@ -53,7 +54,7 @@ $(document).ready(function(){
               <span class="label label-default">Public Repos: ${user.public_repos}</span>
               <span class="label label-primary">Public Gists: ${user.public_gists}</span>
               <span class="label label-success">Followers: ${user.followers}</span>
-              <span class="label label-info">Following: ${user.following}</span>
+              <span class="label label-danger">Following: ${user.following}</span>
               <br><br>
               <ul class="list-group">
                 <li class="list-group-item">Company: ${user.company}</li>

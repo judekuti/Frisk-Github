@@ -1,0 +1,59 @@
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  font-family:codystar;
+}
+
+h1 {
+  animation:type 3s steps(20);
+  overflow:hidden;
+  white-space:nowrap;
+  color:#fff;
+  margin-top:40px;
+  margin-left:60px;
+  font-family:codystar;
+  border-right:4px solid white;
+  font-size:4em;
+}
+
+@keyframes type {
+  0% {
+    width:0ch;
+  }
+  100% {
+    width:18ch;
+  }
+  from {
+    color:#fc2427;
+  }
+  to {
+    color:white;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size:1.8em;
+    margin-left:20px;
+  }
+}
+
+.container {
+  margin-top:20px;
+  margin-bottom:0px;
+  padding-bottom:0px;
+}
+
+hr {
+  margin-top:0px;
+}
+
+.avatar {
+  width:100%;
+}
+
+p {
+  color:#ccc;
+}
+
